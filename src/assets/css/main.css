@@ -1,0 +1,16 @@
+@import url(https://tikzjax.com/v1/fonts.css);
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+@font-face {
+	font-family: "Lexend Deca";
+	src: local("Lexend Deca"),
+		url(./fonts/LexendDeca-VariableFont_wght.ttf) format("truetype");
+}
+
+* {
+	font-family: "Lexend Deca";
+}
