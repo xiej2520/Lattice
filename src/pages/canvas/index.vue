@@ -1,0 +1,3 @@
+<template>
+	<DrawingCanvas></DrawingCanvas>
+</template>

@@ -12,7 +12,6 @@
 				Hello, World!
 			</h1>
 		</div>
-		<DrawingCanvas></DrawingCanvas>
-		<TikzInput></TikzInput>
+		<NuxtLayout><NuxtPage/></NuxtLayout>
 	</div>
 </template>
