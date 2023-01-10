@@ -11,9 +11,13 @@ export default defineNuxtConfig({
 		classSuffix: ""
 	},
 	css: ["~/assets/css/main.css"],
+	imports: {
+		dirs: ["store"],
+	},
 	modules: [
-		"@nuxtjs/tailwindcss",
 		"@nuxtjs/color-mode",
+		"@nuxtjs/tailwindcss",
+		"@pinia/nuxt",
 	],
 	postcss: {
 		plugins: {

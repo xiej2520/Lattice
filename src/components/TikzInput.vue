@@ -1,3 +1,21 @@
+<template>
+	<div class="h-full">
+		<textarea
+			class="h-64
+			block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500
+			dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+			v-model="text"
+			@input="render"
+			placeholder="\begin{tikzpicture}
+	\end{tikzpicture}"
+		></textarea>
+		<div id="tikzOutContainer" class="h-full w-full p-2">
+			<div id="tikzOut" class="bg-white dark:bg-white border-2 border-blue-500 p-8 m-8">
+			</div>
+		</div>
+	</div>
+</template>
+
 <script setup>
 
 const text = ref(`\\begin{tikzpicture}
@@ -21,21 +39,3 @@ async function render() {
 	svgOut.setAttribute("viewBox", `-72 -72 ${machine.paperwidth} ${machine.paperheight}`);
 }
 </script>
-
-<template>
-	<div class="h-full">
-		<textarea
-			class="h-64
-			block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500
-			dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-			v-model="text"
-			@input="render"
-			placeholder="\begin{tikzpicture}
-	\end{tikzpicture}"
-		></textarea>
-		<div id="tikzOutContainer" class="h-full w-full p-2">
-			<div id="tikzOut" class="bg-white dark:bg-white border-2 border-blue-500 p-8 m-8">
-			</div>
-		</div>
-	</div>
-</template>
